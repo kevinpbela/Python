@@ -1,5 +1,5 @@
 '''
-Converter medidas conforme o valor passado pelo usuário
+Criar uma tabuada conforme passada pelo usuário.
 '''
 
 def retorno():
@@ -19,31 +19,37 @@ def retorno():
     pass
 
 def verificar():
-    
+
     try:
 
         val=int(input('Digite um valor inteiro: '))
 
-        calcular(val)
+        tabuada(val)
 
         retorno()
 
     except:
 
-        print('Erro - Dados inseridos são invalidos!')
+        print('Erro - Dado fornecido está invalido!')
 
         retorno()
 
     pass
 
-def calcular(x):
 
-    c=x*100
-    m=x*1000
+def tabuada(x):
 
-    print('O valor em metro {} convertido em centímetro {} cm.'.format(x,c))
+    print('=====Tabuada======')
 
-    print('O valor em metro {} convertido em milímitro {} mm.'.format(x,m))
+    print('='*30)
+
+    for i in range(0,10+1,1):
+
+        res=i*x
+
+        print('{} x {} = {}'.format(i,x,res))
+
+    print('='*30)
     
     pass
 

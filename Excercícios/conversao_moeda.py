@@ -1,6 +1,4 @@
-'''
-Converter medidas conforme o valor passado pelo usuário
-'''
+#Calcular o valor em real e converter em dolar.
 
 def retorno():
 
@@ -18,13 +16,16 @@ def retorno():
 
     pass
 
+
 def verificar():
-    
+
     try:
 
-        val=int(input('Digite um valor inteiro: '))
+        real=float(input('Digite o valor em R$ '))
 
-        calcular(val)
+        dolar=float(input('Informe o valor do dolar $ '))
+
+        converter(real,dolar)
 
         retorno()
 
@@ -36,15 +37,12 @@ def verificar():
 
     pass
 
-def calcular(x):
+def converter(x,y):
 
-    c=x*100
-    m=x*1000
+    con=x/y
 
-    print('O valor em metro {} convertido em centímetro {} cm.'.format(x,c))
+    print('O valor R$ {:.2f} convertido com o dolar $ {:.2f} é de $ {:.2f}.'.format(x,y,con))
 
-    print('O valor em metro {} convertido em milímitro {} mm.'.format(x,m))
-    
     pass
 
 verificar()
