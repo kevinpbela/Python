@@ -1,5 +1,3 @@
-#Calcular o valor em real e converter em dolar.
-
 def retorno():
 
     resp=input('Deseja executar o programa novamente?[s/n]: ')
@@ -16,33 +14,39 @@ def retorno():
 
     pass
 
-
 def verificar():
 
     try:
+        largura=float(input('Digite a largura: '))
+        comprimento=float(input('Digite o comprimento: '))
 
-        real=float(input('Digite o valor em R$ '))
-
-        dolar=float(input('Informe o valor do dolar US$ '))
-
-        converter(real,dolar)
+        calcular(largura,comprimento)
 
         retorno()
 
+        pass
     except:
 
         print('Erro - Dados inseridos são invalidos!')
 
         retorno()
+        
+        pass
 
     pass
 
-def converter(x,y):
+def calcular(a,l):
 
-    con=x/y
+    res=a*l
 
-    print('O valor R$ {:.2f} convertido com o dolar $ {:.2f} é de US$ {:.2f}.'.format(x,y,con))
+    if(a==l):
 
+        print('O quadrado tem área {:.2f}m².'.format(res))
+
+    else:
+
+        print('O retângulo tem área {:.2f}m².'.format(res))
+    
     pass
 
 verificar()
